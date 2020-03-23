@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Invest</title>
+    <style>
+    #wrapper{
+      background-color: #F8FAF0;
+      width:100%;
+      height: 100%;
+      border-color: black;
+      border-width: 8px;
+      border-style: double;
+    }
+
+    </style>
+  </head>
+  <body>
+    {% load staticfiles %}
+    <div id="wrapper">
+      <div class = "container-fluid" style = "margin-top: 20px; ">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" style= "font-size: 50px;" href="#">Invest</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active"style= "font-size: 30px; margin-left: 50px;" href="{% url 'housing:index' %}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link"style= "font-size: 30px;margin-left: 30px;" href="{% url 'housing:property_list' %}">Properties</a>
+                <a class="nav-item nav-link" style= "font-size: 30px;margin-left: 30px;"href="{% url 'housing:about_us' %}">About</a>
+                <a class="nav-item nav-link disabled" style= "font-size: 30px;margin-left: 30px;"href="#">Contact</a>
+              </div>
+            </div>
+         </nav>
+       </div>
+       <div class = "container">
+         <br><br><h1>Invest</h1><br><br>
+          <h4>This year, JEK Developments, LLC, is embarking on a campaign to raise money for a Building Opportunity Fund
+            needed to address the shortage of housing currently facing the City of Chicago.
+            Your investment is not a charitable donation; it is a loan to JEK Development, LLC, that you will get paid back with interest.
+            The intent of the fund is to raise enough capital to build 150 residences in Opportunity Zones
+            within the boundries of the City of Chicago, IL. The fund is open to both accredited and non-accredited investors alike.
+            Each category of investor will have the exact same terms, prices, and contracts.</h4><br><br>
+         <h1 style = "margin-left:200px;">I am:</h1><br>
+            <center>
+              <div class="btn btn-group-lg" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary" style = "margin-right:20px;">Accredited Investor</button>
+                <button type="button" class="btn btn-secondary">Non-Accredited Investor</button><br>
+            </center>
+              <div class = "container" style = "margin-left: 315px;">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <p><strong>I make $200K+ a year <br>or have $1 million in <br>assets, excluding my <br>primary residence.</strong></p>
+                  </div>
+                    <div class="col-xs-6">
+                    <div class = "container"style = "margin-left: 50px;">
+                  <p><strong>I don't meet the accredited<br> criteria, but I still want to<br> support the housing campaign!</strong></p><br><br><br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </body>
+</html>

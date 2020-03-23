@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>About Us</title>
+    <style>
+      #wrapper{
+        background-color: #F8FAF0;
+        width:100%;
+        height: 100%;
+        border-color: black;
+        border-width: 8px;
+        border-style: double;
+      }
+    </style>
+  </head>
+  <body>
+    {% load staticfiles %}
+    <div id="wrapper">
+      <div class = "container-fluid" style = "margin-top: 20px; ">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" style= "font-size: 50px;" href="#">About</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active"style= "font-size: 30px; margin-left: 50px;" href="{% url 'housing:index' %}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link"style= "font-size: 30px;margin-left: 30px;" href="{% url 'housing:property_list' %}">Properties</a>
+                <a class="nav-item nav-link" style= "font-size: 30px;margin-left: 30px;"href="{% url 'housing:invest' %}">Invest</a>
+                <a class="nav-item nav-link disabled" style= "font-size: 30px;margin-left: 30px;"href="#">Contact</a>
+              </div>
+            </div>
+         </nav>
+       </div>
+       <div class = "container" style = "margin-bottom:200px;">
+    <h1 style = "margin-top: 25px; ">JEK Development, LLC</h1><br>
+    <h4>Since 2010, JEK Development has been operating in various Chicago Neighborhoods
+      to build and to renovate existings buildings to provide rental housing for the
+      people of Chicago.</h4> <img class="pr-md-3 pb-3 float-md-left img-fluid"style = "margin-top: 50px; margin-right: 50px;" src= "static/images/draft.jpg" width = 450px height = 300px>
+      <br><br><h4>JEK residences have been built with our core values in mind.
+      A balanced life between work, family, and play. A balanced life that takes advantage of our cities
+      great public transportation and great neighborhoods! One that allows you the opportunity to make the most of your time, stick to your budget, and to get the
+      most of everything the city of Chicago has to offer.</h4>
+      <img class="pr-md-3 pb-3 float-md-center img-fluid" style = "margin-top: 50px; margin-bottom: 50px;"src= "static/images/elevated_train.jpg" width = 450px height = 300px>
+      <img class="pr-md-3 pb-3 float-md-left img-fluid" style = "margin-top: -100px; margin-right: 50px;"src= "static/images/happy_mother_and_child.jpg" width = 450px height = 300px>
+      <h4>Interested in living in one of our units? For more information, contact us or follow us on LinkedIn and Facebook!</h4>
+  </div>
+</div>
+  </body>
+</html>
