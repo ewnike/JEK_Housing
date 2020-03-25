@@ -1,25 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <title>Invest</title>
-    <style>
-    #wrapper{
-      background-color: #F8FAF0;
-      width:100%;
-      height: 100%;
-      border-color: black;
-      border-width: 8px;
-      border-style: double;
-    }
-
-    </style>
   </head>
   <body>
-    {% load staticfiles %}
+
     <div id="wrapper">
       <div class = "container-fluid" style = "margin-top: 20px; ">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -39,9 +30,9 @@
        </div>
        <div class = "container">
          <br><br><h1>Invest</h1><br><br>
-          <h4>This year, JEK Developments, LLC, is embarking on a campaign to raise money for a Building Opportunity Fund
+          <h4>This year, JEK Development, LLC, is embarking on a campaign to raise money for a Building Opportunity Fund
             needed to address the shortage of housing currently facing the City of Chicago.
-            Your investment is not a charitable donation; it is a loan to JEK Development, LLC, that you will get paid back with interest.
+            Your investment is not a charitable donation; it is a loan to JEK Development, LLC. You will get paid back with interest.
             The intent of the fund is to raise enough capital to build 150 residences in Opportunity Zones
             within the boundries of the City of Chicago, IL. The fund is open to both accredited and non-accredited investors alike.
             Each category of investor will have the exact same terms, prices, and contracts.</h4><br><br>
@@ -50,19 +41,20 @@
               <div class="btn btn-group-lg" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-secondary" style = "margin-right:20px;">Accredited Investor</button>
                 <button type="button" class="btn btn-secondary">Non-Accredited Investor</button><br>
-            </center>
-              <div class = "container" style = "margin-left: 315px;">
+
+              <div class = "container" >
                 <div class="row">
                   <div class="col-xs-6">
-                    <p><strong>I make $200K+ a year <br>or have $1 million in <br>assets, excluding my <br>primary residence.</strong></p>
+                    <p style = "padding: 5px;"><strong>I make $200K+ a year <br>or have $1 million in <br>assets, excluding my <br>primary residence.</strong></p>
                   </div>
                     <div class="col-xs-6">
-                    <div class = "container"style = "margin-left: 50px;">
-                  <p><strong>I don't meet the accredited<br> criteria, but I still want to<br> support the housing campaign!</strong></p><br><br><br>
+                    <div class = "container">
+                  <p style = "padding: 5px; margin-left: 50px;"><strong>I don't meet the accredited<br> criteria, but I still want to<br> support the housing<br> campaign!</strong></p><br><br><br>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </center>
   </body>
 </html>
