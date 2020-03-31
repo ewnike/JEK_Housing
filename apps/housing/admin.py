@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib import admin
 from django.contrib.auth.models import *
 # Register your models here.
-from .models import Property
+from .models import Property, Contact
 
 
 class PropertyAdmin(admin.ModelAdmin):
@@ -12,3 +12,9 @@ class PropertyAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 admin.site.register(Property, PropertyAdmin)
+
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('first_name', 'last_name', 'email', 'message')
+    search_fields = ['first_name', 'last_name', 'email', 'message']
+
+admin.site.register(Contact, ContactAdmin)

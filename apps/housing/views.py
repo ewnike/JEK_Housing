@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, HttpRespon
 from .models import Property
 from django.views.generic import ListView, DetailView, View
 from apps.housing.models import Property
+from .forms import ContactUsForm
 
 # Create your views here.
 def homepage(request):
@@ -12,6 +13,22 @@ def about_us(request):
 
 def invest(request):
     return render(request, "housing/invest.html")
+
+def contact_validate(request):
+    if request.method == "POST":
+        bound_form = ContactUsForm(request.POST)
+        print(bound_form.is_valid())
+        print(bound_form.errors)
+        new_contact = bound_form.save()
+        return redirect('/contact', message = {})
+
+def contact(request):
+    form = ContactUsForm()
+    context = { "contactForm": form }
+    return render(request, "housing/contact.html", context)
+
+
+
 
 class PropertyListView(ListView):
     model = Property

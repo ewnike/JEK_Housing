@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import *
 from datetime import datetime
 from django.urls import reverse
+from django.core.exceptions import ValidationError
 
 STATUS = (
     (0,"Draft"),
@@ -31,3 +32,15 @@ class Property(models.Model):
 
     def get_absolute_url(self):
         return reverse('property:detail', kwargs={'slug': self.slug})
+
+def validateLengthGreaterThanTwo(value):
+    if len(value) < 3:
+        raise ValidationError(
+            '{} must be longer than: 2'.format(value)
+        )
+
+class Contact(models.Model):
+    first_name = models.CharField(max_length =20, validators = [validateLengthGreaterThanTwo])
+    last_name = models.CharField(max_length = 20, validators = [validateLengthGreaterThanTwo])
+    email = models.EmailField(validators = [validateLengthGreaterThanTwo])
+    message = models.TextField(validators = [validateLengthGreaterThanTwo])

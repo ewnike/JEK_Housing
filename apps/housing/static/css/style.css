@@ -21,3 +21,13 @@
 @media only screen and (min-width: 1024px){
 
 }
+.contact_container{
+  margin-top: 100px;
+  text-align:center;
+}
+
+.form_container{
+  display: inline-block;
+  text-align:right;
+  
+}
