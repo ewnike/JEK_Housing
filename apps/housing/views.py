@@ -3,6 +3,8 @@ from .models import Property
 from django.views.generic import ListView, DetailView, View
 from apps.housing.models import Property
 from .forms import ContactUsForm
+import os
+import requests
 
 # Create your views here.
 def homepage(request):

@@ -1,25 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Contact</title>
-    {% load staticfiles %}
-
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Contact</title>
+    <!--<link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+    <link rel = "stylesheet" href = "https://jdevhousing-static.s3.amazonaws.com/static/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script>
-$(document).ready(function(){
-  $("form").submit(function(){
-    alert("Message Submitted! We will be in touch soon.");
-  });
-});
-</script>
+      $(document).ready(function(){
+        $("form").submit(function(){
+          alert("Message Submitted! We will be in touch soon.");
+        });
+      });
+    </script>
   </head>
   <body>
-
     <div id="wrapper">
       <div class = "container-fluid" style = "margin-top: 20px;">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -46,13 +46,11 @@ $(document).ready(function(){
       "as_table" and "as_ul" are a few others...-->
       <input type="submit" value="send">
     </form>
-
     <div class = page-footer style="float:center;margin-top:300px;">
       <p>&#169; JEK Development, LLC, 2020</p>
     </div>
   </div>
 </div>
-
-  </body>
+</body>
 
 </html>
