@@ -12,29 +12,31 @@
   <body>
     <div id="wrapper">
       <div class = "container-fluid" style = "margin-top: 20px; ">
+        <div class = "row">
+          <div class= "col-xs-12 col-sm-12 col-med-12 col-lg-12 col-xl-12">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" style= "font-size: 50px;" href="#">Invest</a>
+          <a class="navbar-brand"  href="#">Invest</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link active"style= "font-size: 30px; margin-left: 50px;" href="{% url 'housing:index' %}">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link"style= "font-size: 30px;margin-left: 30px;" href="{% url 'housing:property_list' %}">Properties</a>
-                <a class="nav-item nav-link" style= "font-size: 30px;margin-left: 30px;"href="{% url 'housing:about_us' %}">About</a>
-                <a class="nav-item nav-link" style= "font-size: 30px;margin-left: 30px;"href="{% url 'housing:contact' %}">Contact</a>
+                <a class="nav-item nav-link active"style= " margin-left: 50px;" href="{% url 'housing:index' %}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link"style= "margin-left: 30px;" href="{% url 'housing:property_list' %}">Properties</a>
+                <a class="nav-item nav-link" style= "margin-left: 30px;"href="{% url 'housing:about_us' %}">About</a>
+                <a class="nav-item nav-link" style = "margin-left: 30px;"href="{% url 'housing:contact' %}">Contact</a>
               </div>
             </div>
          </nav>
        </div>
        <div class = "container" style = "margin-bottom: 100px;">
          <br><br><h1>Invest</h1><br><br>
-          <h4>This year, JEK Development, LLC, is embarking on a campaign to raise money for a Building Opportunity Fund
+          <h5>This year, JEK Development, LLC, is embarking on a campaign to raise money for a Building Opportunity Fund
             needed to address the shortage of housing currently facing the City of Chicago.
             Your investment is not a charitable donation; it is a loan to JEK Development, LLC. You will get paid back with interest.
             The intent of the fund is to raise enough capital to build 150 residences in Opportunity Zones
             within the boundries of the City of Chicago, IL. The fund is open to both accredited and non-accredited investors alike.
-            Each category of investor will have the exact same terms, prices, and contracts.</h4><br><br>
+            Each category of investor will have the exact same terms, prices, and contracts.</h5><br><br>
          <h1 style = "margin-left:50;">I am:</h1><br>
          <div class="row">
             <div class="col-sm-6">
@@ -56,10 +58,16 @@
               </div>
             </div>
           </div>
-          <div class = page-footer style="float:right;margin-top:50px;">
+          <div class = page-footer style="float:center;margin-top:50px;">
+            <center>
+            <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+            <script type="IN/FollowCompany" data-id="65037161" data-counter="right"></script>
             <p>&#169; JEK Development, LLC, 2020</p>
+          </center>
           </div>
         </div>
+      </div>
+    </div>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
