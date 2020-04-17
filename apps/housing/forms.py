@@ -11,6 +11,11 @@ from .models import Contact
 
 
 class ContactUsForm(forms.ModelForm):
-  class Meta:
+
+    class Meta:
       model = Contact
+      widgets = {
+        'message': forms.Textarea
+        (attrs = {'rows':10,'cols':32}),
+      }
       fields = '__all__'
